@@ -1,22 +1,47 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "echo",
-            "type": "shell",
-            "command": "echo Hello"
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "echo",
+      "type": "shell",
+      "command": "echo Hello"
+    },
+    {
+      "label": "pull",
+      "type": "shell",
+      "command": "ant pull"
+    },
+    {
+      "label": "push",
+      "type": "shell",
+      "command": "ant push"
+    },
+    // Place Holder for class generation 
+    /*{
+      "label": "runwithargs",
+      "type": "shell",
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "powershell.exe",
+            "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-Command"]
+          }
         },
-        {
-            "label": "pull",
-            "type": "shell",
-            "command": "ant pull"
-        },
-        {
-            "label": "push",
-            "type": "shell",
-            "command": "ant push"
-        }
-    ]
+        "command": "",
+        "args": [
+          {
+            "value": "$arg1 = read-host 'Arg 1:';$arg2 = read-host 'Arg 2:';",
+            "quoting": "weak"
+          },
+          { "value": "echo $arg1 $arg2;", "quoting": "weak" }
+        ]
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      }
+    }*/
+  ]
 }
