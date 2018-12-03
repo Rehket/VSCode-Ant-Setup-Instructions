@@ -19,10 +19,17 @@
 	
     <target name="break">
       <exec executable="git">
-        <arg value="remote rm origin"/>
+        <arg value="remote"/>
+        <arg value="rm"/>
+        <arg value="origin"/>
       </exec>
-      <exec executable="rm">
+      <exec executable="Remove-Item">
+        <arg value="-Recurse"/>
+        <arg value="-Force"/>
         <arg value=".git"/>
+      </exec>
+      <exec executable="git">
+        <arg value="init"/>
       </exec>
     </target>
 
