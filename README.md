@@ -1,4 +1,8 @@
 # Setting Up VS Code with Ant for SFDC Development.
+## TODO:
+- Add Ant Setup instructions.
+- Add Migration Tool Setup Instructions
+- Add Build Setup Instructions
 
 ## Requirements
 - Vs Code - Any recent version should work.
