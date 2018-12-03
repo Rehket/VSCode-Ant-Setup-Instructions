@@ -17,13 +17,13 @@
         </classpath>
     </taskdef>
 	
-    <!-- Test out deploy and retrieve verbs for package 'mypkg' -->
-    <target name="test">
-      <!-- Upload the contents of the "mypkg" package -->
-      <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="mypkg" rollbackOnError="true"/>
-      <mkdir dir="retrieveOutput"/>
-      <!-- Retrieve the contents into another directory -->
-      <sf:retrieve username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" retrieveTarget="retrieveOutput" packageNames="MyPkg"/>
+    <target name="break">
+      <exec executable="git">
+        <arg value="remote rm origin"/>
+      </exec>
+      <exec executable="rm">
+        <arg value=".git"/>
+      </exec>
     </target>
 
     <!-- Retrieve an unpackaged set of metadata from your org -->
@@ -48,4 +48,6 @@
     <target name="push">
       <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" testLevel="NoTestRun" deployRoot="src" rollbackOnError="true"/>
     </target>
+
+    <!-- Add the Deploy Test -->
 </project>
