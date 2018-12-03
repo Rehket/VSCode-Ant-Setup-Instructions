@@ -44,7 +44,11 @@ You should see something like:
 
 - Once you have saved the updated build file, open vscode in the directory repo directory.
 
-- Once vscode is running, open a terminal with ``` Ctrl + Shift + ` ``` and type ``` ant break ``` . This command disconnects the repo 
+- Once vscode is running, change example-build.properties to build.properties and enter your credentials. 
+
+- Running ```git remote rm origin``` will disconnet the repo. 
+
+- Finally running ```ant pull``` will pull source code from the instance associated with the credentials you specified in the build properties.
 
 
 
