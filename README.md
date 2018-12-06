@@ -67,6 +67,7 @@ sf.password = yourSFDC_sfdcPassword+token
 # Example sf.password = myPasswordMyToken323422525hb45g4
 
 ```
+8. Run ```git remote rm origin``` to disconnect this repo from github.  
 
 ### Configuration
 
@@ -82,6 +83,14 @@ sf.password = yourSFDC_sfdcPassword+token
         Ex: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 
 
+There are many was to customize VSCode. Your best bet is to look into the documentation: https://code.visualstudio.com/docs
+
+### Pushing and pulling code
+First verify that ant is configured correctly by running ```ant -version```. You should see output indication ants version. 
+
+1. From the repo directory, run ```ant pull```. This command pulls code from the SFDC instance specified in your build.properties file. The pull command is an alias defined in the ```build.xml``` file. If you have set up everything correctly, a few object files and all the lighting components in your org will be downloaded.  
+
+- If you see a connection error, you may need to re-attempt the pull a few times. 
 
 
 
