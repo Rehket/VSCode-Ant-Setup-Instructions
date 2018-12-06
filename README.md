@@ -46,7 +46,7 @@ Apache Ant(TM) version 1.10.5 compiled on July 10 2018
 
 <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
         <classpath>
-            <!-- Change the relative reference to point ath the unzip location. -->
+            <!-- Change the relative reference to point at the unzip location. -->
             <!-- <pathelement location="../ant-salesforce.jar" /> -->  	
             <pathelement location="C:/Users/{Your Username}/SFDC_ANT/ant-salesforce.jar" />	
         </classpath>
