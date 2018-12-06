@@ -88,10 +88,15 @@ There are many was to customize VSCode. Your best bet is to look into the docume
 ### Pushing and pulling code
 First verify that ant is configured correctly by running ```ant -version```. You should see output indication ants version. 
 
-1. From the repo directory, run ```ant pull```. This command pulls code from the SFDC instance specified in your build.properties file. The pull command is an alias defined in the ```build.xml``` file. If you have set up everything correctly, a few object files and all the lighting components in your org will be downloaded.  
+- From the repo directory, run ```ant pull```. This command pulls code from the SFDC instance specified in your build.properties file. The pull command is an alias defined in the ```build.xml``` file. If you have set up everything correctly, a few object files and all the lighting components in your org will be downloaded.  
 
 - If you see a connection error, you may need to re-attempt the pull a few times. 
 
+- Running ```ant push``` pushes local code to the salesforce instance. 
+
+- The code the gets pushed or pulled when you run the command is determined by the ```package file```. The package file is an eml file that is used to tell SFDC what files are present in a push or what files to send in a pull. 
+
+Documentation regarding pushing and pulling objects or code with the migration tool can be found at: https://resources.docs.salesforce.com/sfdc/pdf/salesforce_migration_guide.pdf
 
 
 
